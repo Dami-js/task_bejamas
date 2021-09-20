@@ -18,7 +18,12 @@ const PriceRange = styled(({ className = "" }) => {
   };
 
   useEffect(() => {
-    setQueries({ ...queries, price_gte: priceGte, price_lte: priceLte });
+    setQueries({
+      ...queries,
+      _page: 1,
+      price_gte: priceGte,
+      price_lte: priceLte,
+    });
   }, [priceGte, priceLte]);
 
   return (
