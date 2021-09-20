@@ -35,7 +35,7 @@ const Category = styled(({ className = "" }) => {
       return;
     }
     newCategories.push(val);
-    setQueries({ ...queries, category: [...newCategories] });
+    setQueries({ ...queries, _page: 1, category: [...newCategories] });
   };
 
   return (
